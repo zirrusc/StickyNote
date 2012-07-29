@@ -1,6 +1,6 @@
 ﻿namespace StickyNote
 {
-	partial class Sticky
+	partial class StickyForm
 	{
 		/// <summary>
 		/// 必要なデザイナー変数です。
@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sticky));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StickyForm));
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
 			this.tsbAdd = new System.Windows.Forms.ToolStripButton();
 			this.tsbClear = new System.Windows.Forms.ToolStripButton();

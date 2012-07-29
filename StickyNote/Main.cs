@@ -17,9 +17,9 @@ namespace StickyNote
 		//Sticky s;
 		//ArrayList arraySticky = new ArrayList();
 		public const string crlf = "\r\n";
-		public Hashtable hashSticky = new Hashtable();
-		public Hashtable hashForm = new Hashtable();
-		private Hashtable hashList = new Hashtable();
+		//public Hashtable hashSticky = new Hashtable();
+		//public Hashtable hashForm = new Hashtable();
+		//private Hashtable hashList = new Hashtable();
 		//int iSticky = 0;
 		const string emptyText = "<未記入>";
 		const string beforeReplace = "\r\n";
@@ -76,7 +76,7 @@ namespace StickyNote
 			{
 				//s = new Sticky(this, i, hashSticky[i].ToString());
 				//s.Show();
-				hashForm.Add(i, new Sticky(this, i, hashSticky[i].ToString()));
+				hashForm.Add(i, new StickyForm(this, i, hashSticky[i].ToString()));
 				((Form)hashForm[i]).Show();
 				result = true;
 			}
@@ -87,7 +87,7 @@ namespace StickyNote
 		{
 			//s = new Sticky(this, hashSticky.Count);
 			//s.Show();
-			hashForm.Add(hashForm.Count, new Sticky(this, hashSticky.Count));
+			hashForm.Add(hashForm.Count, new StickyForm(this, hashSticky.Count));
 			((Form)hashForm[hashForm.Count - 1]).Show();
 			//arraySticky.Add(s);
 			hashSticky.Add(hashSticky.Count, null);
@@ -158,18 +158,6 @@ namespace StickyNote
 			}
 			listBox1.Items.Clear();
 			hashList.Clear();
-			//foreach (var item in hashSticky)
-			//{
-			//    if (((DictionaryEntry)item).Value == null || (string)((DictionaryEntry)item).Value == "")
-			//    {
-			//        listBox1.Items.Add(emptyText);
-			//    }
-			//    else
-			//    {
-			//        listBox1.Items.Add(((DictionaryEntry)item).Value);					
-			//    }
-			//    hashList.Add(listBox1.Items.Count - 1, ((DictionaryEntry)item).Key);
-			//}
 			for (int i = 0; i < hashSticky.Count; i++)
 			{
 				if (hashSticky[i] == null || (string)hashSticky[i] == "")
